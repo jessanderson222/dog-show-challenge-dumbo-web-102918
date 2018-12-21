@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>WKC Dog Show</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="./src/dog.js"></script>
+    <!-- <script src="./src/dog.js"></script>
     <script src="./src/adapter.js"></script>
-    <script src="./src/dogController.js"></script>
-    <script src="./src/index.js"></script>
+    <script src="./src/dogController.js"></script> -->
+   
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
   </head>
@@ -16,24 +16,38 @@
       <h1 class='padding margin'>Westminster Kennel Club Dog Show</h1>
 
       <div class="margin flex">
-        <h4 class='center'>Edit Existing Dog</h4>
+        <h4 class='center'>New Existing Dog</h4>
         <form id='dog-form' class="padding margin border-round border-grey">
-          <input type="name" name="name" placeholder="name" value="">
-          <input type="breed" name="breed" placeholder="breed" value="">
-          <input type="sex" name="sex" placeholder="sex" value="">
-          <input type="submit"value="Submit">
+          <input id="name" type="name" name="name" placeholder="name" value="">
+          <input id="breed" type="breed" name="breed" placeholder="breed" value="">
+          <input id="sex" type="sex" name="sex" placeholder="sex" value="">
+          <input id="submit-button" type="submit"value="Submit">
+        </form>
+
+        <h4 class='center'>Edit Existing Dog</h4>
+        <form id='edit-form' class="padding margin border-round border-grey">
+          <input id="e-name" type="name" name="name" placeholder="name" value="">
+          <input id="e-breed" type="breed" name="breed" placeholder="breed" value="">
+          <input id="e-sex" type="sex" name="sex" placeholder="sex" value="">
+          <input class="edit-btn" id="e-submit-button" type="submit"value="Submit">
         </form>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
       <div class="margin flex">
         <h4 class='center'>Registered Dogs</h4>
-        <table class='margin' border="1">
+        <table class='margin' id = 'dog-table' border="1">
           <thead class='blue'>
             <tr class='padding'>
               <th class='padding center'>Name</th>
               <th class='padding center'>Breed</th>
               <th class='padding center'>Sex</th>
               <th class='padding center'>Edit Dog</th>
+              <th class='padding center'>Delete Dog</th>
             </tr>
           </thead>
           <tbody id="table-body">
@@ -41,5 +55,6 @@
         </table>
       </div>
     </div>
+    <script src="./src/index.js"></script>
   </body>
 </html>
